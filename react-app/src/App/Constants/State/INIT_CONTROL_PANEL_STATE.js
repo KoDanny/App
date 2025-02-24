@@ -1,5 +1,5 @@
 export const INIT_CONTROL_PANEL_STATE = {
-	searchInputValue: '',
-	addInputValue: '',
+	inputSearchValue: '',
+	inputAddValue: '',
 	isSortingEnable: false,
 };

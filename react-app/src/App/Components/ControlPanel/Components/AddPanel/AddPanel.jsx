@@ -1,18 +1,20 @@
-import { Container, Button, Input } from '../../../Components';
+import { Container, Button, Input } from '../../../Custom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectAddInputValue } from '../../../../Selectors';
-import * as actionCreators from '../../../../actionCreators';
+import { selectInputAddValue } from '../../../../Selectors';
+import { useActionCreator } from '../../../../Hooks';
 
 export const AddPanel = () => {
+	const actionCreators = useActionCreator();
 	const dispatch = useDispatch();
-	const inputValue = useSelector(selectAddInputValue);
+	const inputValue = useSelector(selectInputAddValue);
 
 	const onInputAddChange = ({ target }) => {
 		dispatch(actionCreators.setAddInputValue(target.value));
 	};
 
 	const onButtonAddClick = async () => {
-		dispatch(actionCreators.createTask({ title: inputValue }));
+		// dispatch(actionCreators.createTask({ title: inputValue }));
+		dispatch(actionCreators.setters.ADD_TASK({ title: inputValue }));
 		dispatch(actionCreators.setAddInputValue(''));
 	};
 

@@ -24,7 +24,7 @@ const getRequest =
 		}
 	};
 
-export const createTask = getRequest('POST');
-export const readTask = getRequest('GET');
-export const updateTask = getRequest('PATCH');
-export const deleteTask = getRequest('DELETE');
+export const createTaskAsync = getRequest('POST');
+export const readTaskAsync = getRequest('GET');
+export const updateTaskAsync = getRequest('PATCH');
+export const deleteTaskAsync = getRequest('DELETE');

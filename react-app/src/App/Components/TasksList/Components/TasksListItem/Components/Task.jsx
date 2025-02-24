@@ -1,10 +1,11 @@
-import { Button, Input } from '../../../../Components';
+import { Button, Input } from '../../../../Custom';
 import styles from './Styles.module.css';
 import { useDispatch } from 'react-redux';
-import * as actionCreators from '../../../../../actionCreators';
+import { useActionCreator } from '../../../../../Hooks';
 
 export const Task = ({ title, completed, id }) => {
 	const dispatch = useDispatch();
+	const actionCreators = useActionCreator();
 
 	const onCompletedCheckboxChange = async ({ target }) => {
 		dispatch(actionCreators.updateTask({ id, completed: target.checked }));

@@ -1,1 +1,1 @@
-export const selectAddInputValue = (state) => state.controlPanel.addInputValue;
+export const selectInputAddValue = (state) => state.controlPanel.inputAddValue;

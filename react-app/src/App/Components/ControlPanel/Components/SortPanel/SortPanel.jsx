@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Input } from '../../../Components';
+import { Container, Input } from '../../../Custom';
 import { selectIsSortingEnable } from '../../../../Selectors';
-import * as actionCreators from '../../../../actionCreators';
+import { useActionCreator } from '../../../../Hooks';
 
 export const SortPanel = () => {
+	const actionCreators = useActionCreator();
 	const dispatch = useDispatch();
 	const isSortingEnable = useSelector(selectIsSortingEnable);
 

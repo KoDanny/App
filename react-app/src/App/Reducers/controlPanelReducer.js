@@ -11,9 +11,9 @@ export const controlPanelReducer = (
 ) => {
 	switch (type) {
 		case SET_SEARCH_INPUT_VALUE:
-			return { ...state, searchInputValue: payload };
+			return { ...state, inputSearchValue: payload };
 		case SET_ADD_INPUT_VALUE:
-			return { ...state, addInputValue: payload };
+			return { ...state, inputAddValue: payload };
 		case SET_IS_SORT_ENABLE:
 			return { ...state, isSortingEnable: payload };
 		default:

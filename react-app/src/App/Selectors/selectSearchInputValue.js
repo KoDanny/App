@@ -1,1 +1,1 @@
-export const selectSearchInputValue = (state) => state.controlPanel.searchInputValue;
+export const selectInputSearchValue = (state) => state.controlPanel.inputSearchValue;
